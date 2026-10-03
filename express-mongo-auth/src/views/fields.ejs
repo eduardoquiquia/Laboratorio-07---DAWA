@@ -1,0 +1,13 @@
+<div class="row">
+  <% for (const [name, label, type, required] of [ ['name', 'Nombre', 'text', true], ['lastName', 'Apellidos', 'text', true], ['phoneNumber', 'Teléfono', 'tel', true], ['birthdate', 'Fecha de nacimiento', 'date', true], ['email', 'Correo electrónico', 'email', true], ...(editing ? [['url_profile', 'URL de la foto de perfil', 'url', false], ['adress', 'Dirección', 'text', false]] : []) ]) { %>
+    <div class="input-field col s12 m6">
+      <input id="<%= name %>" name="<%= name %>" type="<%= type %>" <%= required ? 'required' : '' %> <%= name === 'birthdate' ? 'max=' + new Date().toISOString().slice(0, 10) : '' %>>
+      <label class="active" for="<%= name %>"><%= label %></label>
+    </div>
+  <% } %>
+  <div class="input-field col s12">
+    <input id="password" name="password" type="password" minlength="8" autocomplete="new-password" <%= editing ? '' : 'required' %>>
+    <label for="password"><%= editing ? 'Nueva contraseña (opcional)' : 'Contraseña' %></label>
+    <span class="helper-text">Mínimo 8 caracteres, una mayúscula, un dígito y un símbolo # $ % &amp; * @.</span>
+  </div>
+</div>

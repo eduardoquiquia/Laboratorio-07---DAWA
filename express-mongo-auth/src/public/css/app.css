@@ -1,0 +1,24 @@
+:root { color-scheme: light; }
+body { background: #f4f7f7; color: #203b3b; min-height: 100vh; margin: 0; }
+nav .nav-wrapper { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-size: 1.3rem; font-weight: 700; letter-spacing: .08em; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 20px; }
+.nav-links a { color: white; }
+main { padding-top: 35px; min-height: 75vh; }
+.auth-container { max-width: 740px; }
+h1 { font-size: 2.6rem; font-weight: 700; margin: 12px 0 20px; }
+h2 { font-size: 1.5rem; margin: 0 0 30px; }
+.eyebrow { font-size: .75rem; letter-spacing: .15em; color: #526e6e; font-weight: 700; }
+.intro { font-size: 1.15rem; color: #526e6e; }
+.card-panel { border-radius: 12px; padding: 30px; box-shadow: 0 3px 15px #173b3b12; }
+.input-field { margin-bottom: 26px; }
+.btn { border-radius: 5px; text-transform: none; }
+#message { padding: 14px 20px; border-radius: 8px; background: #ffebee; color: #9b1c2e; margin: 20px 0; }
+#message.success { background: #d8f1e6; color: #18563e; }
+.table-scroll { overflow-x: auto; }
+dl { display: grid; grid-template-columns: minmax(130px, 1fr) 2fr; gap: 12px 20px; margin: 0; }
+dt { font-weight: 600; } dd { margin: 0; overflow-wrap: anywhere; }
+.error-code { font-size: 4rem; font-weight: 700; margin: 0; color: #00796b; }
+footer { color: #526e6e; padding: 30px 0; font-size: .8rem; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) { .nav-links { gap: 10px; font-size: .8rem; } .brand { font-size: 1rem; } .nav-links button { padding: 0 8px; } h1 { font-size: 2rem; } .card-panel { padding: 22px; } dl { grid-template-columns: 1fr; gap: 5px; } dd { margin-bottom: 12px; } }
